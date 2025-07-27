@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smc.mybatis.dao.EmployeeMapperPlus">
+    <!--自定某个javaBean的封装规则
+    type：自定义规则的java类型
+    id：唯一
+    -->
+    <resultMap id="mySimpleMap" type="com.smc.mybatis.bean.Employee">
+<!--        指定主键的封装规则
+        id定义主键会有底层优化
+        column：指定哪一列
+        property：指定的javaBean属性
+-->
+        <id column="id" property="id"></id>
+<!--        定义普通列封装规则-->
+        <result column="last_name" property="lastName"></result>
+<!--        其他不指定的列会自动封装；但我们只要写resultMap就把所有的映射规则都写上-->
+        <result column="email" property="email"></result>
+        <result column="gender" property="gender"></result>
+    </resultMap>
+    <!--resultType和resultMap只能二选一-->
+    <select id="findById" resultMap="mySimpleMap">
+        select *
+        from tb1_employee
+        where id = #{id}
+    </select>
+
+    <resultMap id="MyEmp" type="com.smc.mybatis.bean.Employee">
+        <id column="id" property="id"></id>
+        <result column="last_name" property="lastName"></result>
+        <result column="gender" property="gender"></result>
+        <result column="did" property="dept.id"></result>
+        <result column="dName" property="dept.deptName"></result>
+    </resultMap>
+
+    <resultMap id="MyEmp2" type="com.smc.mybatis.bean.Employee">
+        <id column="id" property="id"></id>
+        <result column="last_name" property="lastName"></result>
+        <result column="gender" property="gender"></result>
+        <association property="dept" javaType="com.smc.mybatis.bean.Department">
+            <id column="did" property="id"></id>
+            <result column="dName" property="deptName"></result>
+        </association>
+    </resultMap>
+    <select id="getEmpAndDept" resultMap="MyEmp2">
+        select a.id,a.last_name,a.gender,b.id did,b.dept_name dName
+        from tb1_employee a,tb1_dept b
+        where a.d_id = b.id AND a.id = #{id}
+    </select>
+    <resultMap id="MyEmp3" type="com.smc.mybatis.bean.Employee">
+        <id column="id" property="id"></id>
+        <result column="last_name" property="lastName"></result>
+        <result column="gender" property="gender"></result>
+        <result column="email" property="email"></result>
+        <!--select表明当前属性是调用select指定的方法查出的结果
+        column指定那一列的值传给这个方法-->
+        <association property="dept" select="com.smc.mybatis.dao.DepartmentMapper.findById"
+        column="d_id">
+
+        </association>
+    </resultMap>
+    <select id="getEmpByIdStep" resultMap="MyEmp3">
+        select *
+        from tb1_employee
+        where id = #{id}
+    </select>
+
+    <resultMap id="MyEmp4" type="com.smc.mybatis.bean.Employee">
+        <id column="id" property="id"></id>
+        <result column="last_name" property="lastName"></result>
+        <result column="gender" property="gender"></result>
+        <result column="email" property="email"></result>
+<!--        column：指定要判定的列名
+            javaType：列值对应的java类型
+-->
+        <discriminator javaType="String" column="gender">
+<!--            resultType:指定封装结果类型;resultType和resultMap二选一-->
+            <case value="0" resultType="com.smc.mybatis.bean.Employee">
+                <association property="dept" select="com.smc.mybatis.dao.DepartmentMapper.findById"
+                             column="d_id">
+
+                </association>
+            </case>
+            <case value="1" resultType="com.smc.mybatis.bean.Employee">
+                <result column="last_name" property="email"></result>
+            </case>
+        </discriminator>
+
+    </resultMap>
+    <select id="getEmpByIdStep1" resultMap="MyEmp4">
+        select *
+        from tb1_employee
+        where id = #{id}
+    </select>
+</mapper>

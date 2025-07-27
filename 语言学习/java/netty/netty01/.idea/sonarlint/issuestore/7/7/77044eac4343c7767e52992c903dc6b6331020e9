@@ -1,0 +1,12 @@
+
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(Òå•õúÿÿÿÿ
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(é‹¼ìùÿÿÿÿ
+O
+java:S1612*"9Replace this lambda with method reference 'Buffer::flip'.(ŽŽ«á
+P
+java:S16123":Replace this lambda with method reference 'Buffer::clear'.(¹–Ž±
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(€ä¥Å
+l
+java:S2095"QUse try-with-resources or close this "ServerSocketChannel" in a "finally" clause.(ãöŒÎüÿÿÿÿ
+=
+java:S2189 ""Add an end condition to this loop.(˜ïˆžÿÿÿÿÿ

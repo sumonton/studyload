@@ -1,0 +1,13 @@
+
+R
+java:S1854!"<Remove this useless assignment to local variable "callback".(¨¡˜¡
+S	java:S106"9Replace this use of System.out or System.err by a logger.(—ë÷ûÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¹³ò—
+O
+java:S1611!"9Remove the parentheses around the "consumerTag" parameter(¨¡˜¡
+C
+java:S1481!"-Remove this unused "callback" local variable.(¨¡˜¡
+V	java:S125%"<This block of commented-out lines of code should be removed.(ÑÙÉ«ıÿÿÿÿ
+G
+java:S1602)",Remove useless curly braces around statement(Ü¦¿íûÿÿÿÿ
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(®ÜØ§

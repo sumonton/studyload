@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置user对象-->
+    <bean id="user" class="com.smc.demo1.User"></bean>
+
+    <!-- 创建对象并set注入属性 -->
+    <bean id="book" class="com.smc.demo2.Book">
+        <property name="name" value="易筋经"></property>
+        <property name="author" value="达摩老祖"></property>
+    </bean>
+
+    <!-- 创建对象并有参构造注入属性 -->
+    <bean id="book1" class="com.smc.demo2.Book">
+        <constructor-arg name="name" value="平凡的人生"></constructor-arg>
+        <constructor-arg name="author" value="路遥"></constructor-arg>
+    </bean>
+
+    <!-- 创建对象并set注入属性 -->
+    <bean id="book2" class="com.smc.demo2.Book" p:name="九阳神功" p:author="无名氏"></bean>
+
+    <!-- 创建对象并set注入属性null值 -->
+    <bean id="book3" class="com.smc.demo2.Book">
+        <property name="name" value="易筋经"></property>
+        <property name="author" value="达摩老祖"></property>
+        <property name="address">
+            <null/>
+        </property>
+    </bean>
+
+    <!-- 创建对象并set注入属性含有特殊符号
+     1、用&lt和&gt转义
+     2、用带特殊符号内容写到CDATA
+     -->
+    <bean id="book4" class="com.smc.demo2.Book">
+        <property name="name" value="易筋经"></property>
+        <property name="author" value="达摩老祖"></property>
+        <property name="address">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+    </bean>
+</beans>

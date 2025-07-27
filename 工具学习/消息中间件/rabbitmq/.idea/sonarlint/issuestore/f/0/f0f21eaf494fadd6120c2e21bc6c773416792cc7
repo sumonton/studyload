@@ -1,0 +1,15 @@
+
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8±¦Ó÷®0
+t
+java:S1192/"WDefine a constant instead of duplicating this literal "x-dead-letter-exchange" 3 times.(Ü¼Ì¼8ôÎÒ÷®0
+w
+java:S11921"ZDefine a constant instead of duplicating this literal "x-dead-letter-routing-key" 3 times.(×åãÎ8õÎÒ÷®0
+€
+java:S14884"^Immediately return this expression instead of assigning it to the temporary variable "queueA".(‡æìÔıÿÿÿÿ8ôŠÔ®0
+{
+java:S1488G"^Immediately return this expression instead of assigning it to the temporary variable "queueB".(ş½ä·8‡–ŠÔ®0
+€
+java:S1488X"^Immediately return this expression instead of assigning it to the temporary variable "queueC".(³à›¶üÿÿÿÿ8øÎÒ÷®0
+{
+java:S1488d"^Immediately return this expression instead of assigning it to the temporary variable "queueD".(Û°˜É8”ÃŠÔ®0

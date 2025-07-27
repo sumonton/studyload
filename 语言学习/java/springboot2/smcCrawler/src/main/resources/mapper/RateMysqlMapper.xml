@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smc.crawler.mapper.RateMysqlMapper">
+
+    <resultMap id="BaseResultMap" type="com.smc.crawler.bean.RateMysql">
+            <result property="usdRmb" column="USD_RMB" jdbcType="DOUBLE"/>
+            <result property="usdInr" column="USD_INR" jdbcType="DOUBLE"/>
+            <result property="usdIdr" column="USD_IDR" jdbcType="DOUBLE"/>
+            <result property="updatetime" column="UPDATETIME" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        USD_RMB,USD_INR,USD_IDR,UPDATETIME
+    </sql>
+</mapper>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function ajaxRequest(){
+            //1、首先创建XMLHttpRequest对象
+            var xmlhttpRequest = new XMLHttpRequest();
+            //2、调用open方法设置请求参数
+            xmlhttpRequest.open("GET","AjaxServlet?action=javascriptAjaxRequest",true);
+            //3、调用send方法进行发送请求
+            xmlhttpRequest.send();
+            //4、在方法中绑定onreadyChange事件，处理请求完成后的操作
+            xmlhttpRequest.onreadystatechange = function (){
+                if (xmlhttpRequest.readyState == 4 && xmlhttpRequest.status == 200){
+                    let responseText = xmlhttpRequest.responseText;
+                    // var responseText = JSON.parse(xmlhttpRequest.responseText);
+
+                    document.getElementById("div01").innerText = responseText;
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+  <button onclick="ajaxRequest()">发送请求</button>
+  <div id="div01"></div>
+</body>
+</html>

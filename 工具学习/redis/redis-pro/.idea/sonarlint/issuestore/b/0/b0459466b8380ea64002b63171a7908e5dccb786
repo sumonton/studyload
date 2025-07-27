@@ -1,0 +1,11 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¸ŽÌŽÿÿÿÿÿ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(Â¾ËÎ
+T
+java:S1128"9Remove this unused import 'sun.lwawt.macosx.CSystemTray'.(Í†‹¦ýÿÿÿÿ
+\
+java:S1192"FDefine a constant instead of duplicating this literal "user1" 3 times.(ñ­Ñî
+a
+java:S1192"FDefine a constant instead of duplicating this literal "user2" 3 times.(™ÊÌõøÿÿÿÿ
+P
+java:S1191"5Use classes from the Java API instead of Sun classes.(Í†‹¦ýÿÿÿÿ

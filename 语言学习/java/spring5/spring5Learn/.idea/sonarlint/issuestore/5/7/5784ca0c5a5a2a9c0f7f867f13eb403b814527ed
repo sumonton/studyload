@@ -1,0 +1,12 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¿Æ½±
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(¿Æ½±
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(¿Æ½±
+S	java:S1064"9Replace this use of System.out or System.err by a logger.(Ž³ð¸ûÿÿÿÿ
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(Þ€Éùÿÿÿÿ
+N	java:S106D"9Replace this use of System.out or System.err by a logger.(ÝÚ±×
+Z	java:S106K"9Replace this use of System.out or System.err by a logger.(µ¯¯ùÿÿÿÿ8Û×Øúü/
+Z	java:S106R"9Replace this use of System.out or System.err by a logger.(µ¯¯ùÿÿÿÿ8Œùèúü/
+Z	java:S106Z"9Replace this use of System.out or System.err by a logger.(µ¯¯ùÿÿÿÿ8ÖÄôúü/
+]
+java:S2259<"BA "NullPointerException" could be thrown; "book" is nullable here.(Þ€Éùÿÿÿÿ

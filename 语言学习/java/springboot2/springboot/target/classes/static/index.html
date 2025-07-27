@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>书蒙尘的欢迎页</h1>
+<form action="/saveUser" method="post"><br/>
+    姓名：<input type="text" name="userName" value="zhangsan"><br/>
+    年龄：<input type="text" name="age" value="18"><br/>
+    生日：<input type="text" name="birth" value="2019/12/10"><br/>
+    宠物姓名：<input type="text" name="pet.name" value="阿狗"><br/>
+    宠物年龄：<input type="text" name="pet.age" value="5"><br/>
+    <input type="submit" value="保存"><br/>
+</form>
+</body>
+</html>

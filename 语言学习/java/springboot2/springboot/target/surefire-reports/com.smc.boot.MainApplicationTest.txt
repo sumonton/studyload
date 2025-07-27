@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: com.smc.boot.MainApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 1, Skipped: 1, Time elapsed: 0.24 s <<< FAILURE! - in com.smc.boot.MainApplicationTest
+testTimeout  Time elapsed: 0.075 s  <<< ERROR!
+java.util.concurrent.TimeoutException: testTimeout() timed out after 5 milliseconds
+
+all  Time elapsed: 0.018 s  <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+test (1 failure)
+	org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+	at com.smc.boot.MainApplicationTest.all(MainApplicationTest.java:79)
+
+exceptionTest  Time elapsed: 0.005 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 业务逻辑异常 ==> Expected java.lang.ArithmeticException to be thrown, but nothing was thrown.
+	at com.smc.boot.MainApplicationTest.exceptionTest(MainApplicationTest.java:85)
+
+testSimpleAssertions  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 业务逻辑计算失败 ==> expected: <5> but was: <6>
+	at com.smc.boot.MainApplicationTest.testSimpleAssertions(MainApplicationTest.java:70)
+

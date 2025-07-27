@@ -1,0 +1,6 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ùˆúô
+[
+java:S1128">Remove this unused import 'java.nio.charset.StandardCharsets'.(ï˜ÞÛ8ãÿ¶Ø´0
+f
+java:S2095"KUse try-with-resources or close this "SocketChannel" in a "finally" clause.(–¦ªÐøÿÿÿÿ

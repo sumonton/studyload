@@ -1,0 +1,77 @@
+### 1、职责链模式（Chain of Responsibility Pattern）
+* 避免请求发送者和接受者耦合在一起，让多个对象都有可能接收请求，将这些对象连接成一条链，并且沿这条链传递请求，知道有对象处理它为止。
+* 如某OA系统需要提供一个假条审批模块，如果员工请假天数小于3天，主任可以审批请假条；若天数大于三天小于10天，经理可以审批；如果员工请假天数大于10天小于30天，总经理可以审批；如果超过30天，总经理也不能审批，提示拒绝相关信息。
+<br>
+![](https://www.plantuml.com/plantuml/png/hL71QiCm3BtdAmGxhA5BS_UWz53OfTjX_GBD4Qd1SJfRAOoj_pvQHQd3RgCdMqzwJq_I9Z567ZfVF1wOZydKzT5Zk20hstUrzPXIrJXi8tR5DO8TuOdUwNEWnDy5043bBz0RTWHcpz65DeEt-0N61Rv2ovoya5gOs4ykC2Yf548Ytcd-3w44S-fTarKATv4BpOhQNAxCxKfE1KhnV2xm8t54op0Dtr2KiHz2Dh4WQR2MKkeZ6AaKPVcFzeLt6s-ld8MKmIHImlFD-G53uwVLvNk4AAyEUXuFjNMHBFUZswM6QaDS_5Fx5GEsfD8ItKVvXG95zFC62jwbZou2gkfd3UETH7gEpRhEK_90ds5WfiDfUhLQG-wbs51eXix_0W00)
+
+***
+### 2、命令模式（Command pattern）
+* 将一个请求封装为一个对象，从而使我们可用不同的请求对客户进行参数化；对请求排队或者记录请求日志，以及支持可撤销的操作。
+* 如电视机是请求的接收者，遥控器是请求的发起者，遥控器上有一些按钮，不同的按钮对应电视机不同的操作。抽象命令角色由一个命令接口来扮演，有三个具体的命令类实现了抽象的命令接口，这个具体命令类分别表示三种操作：打开电视机，关闭电视机和切换频道。
+<br>
+![](https://www.plantuml.com/plantuml/png/dPB1ReCm38RlUGhV1cffxvbKTUe3x5Bjde7R8eKO4OCcRNlt5R0KmWIgsblj3_pvDqVFfk6sikhbnbnxlT_NrhY-iikfskVMU9yLfRasfbBcqtDZSeQX36_ozqHLPLpnhU3-s-0NvYrZaeBkg2pKhr8ZVlvuhz55SCOTw3DQx4fVaXjV4759w09twT88HunWyS90btYGra8FZtAtetilILyLkWBwnuBUwMRS5HyG5F89nQQytiHHth5WcG_T1KzB_Z5D0PyCKaOjE_RDM36A7hAspduEiyz4XTNNA9cz3aaaOJNv1iSR3pkD1L6TLYHWMVoVUdQO1AQv2zfBX2Yl0A9x8iSDMOkDN8ycW_Linv4ORTUPViTrP1Cc9xC-J1os0pm78eNjl3iTdawF4ASTNQDFFHW1tGE3kVOHNT5MzWy0)
+
+***
+### 3、解释器模式（Interpreter Pattern）
+* 主要用于面向语言开发的编译器和解释器的设计。在某些情况下，为了更好的描述某一些特定类型的问题，可以创建一个新的语言，这个语言拥有自己的表达式和结构，即语法规划，而且可以根据需要灵活地增加新的语法规则。此时，可以用解释器模式来设计这种新的语言。
+<br>
+![](https://www.plantuml.com/plantuml/png/fKwz2i903Dxp5BUfIEtk81LnTV85ulNGWxjSIL8egE_kLGuSgaCnK_BzVFaQKMJjOu35JRMJRLrt0Mb4DZR5sWOKgLgFLyO8xyliBwACLez3nqx49xg3oRFsf8upfij3okkWnkgmWYSKuzbnz8HXjl4qehEzqtUcgXwxQNqe-V-8qmyrsE0TQGxxndx8KXuQHsqVmmi0)
+
+***
+### 4、迭代器模式（Iterator Pattren）
+* 一个聚合对象，如一个列表（List）或者一个集合（Set），应该提供一种方法来让别人剋访问它的元素，而有不需要暴露它的内部结构。此外，针对不同的需要，可能还要以不同的方式遍历整个聚合对象，但是我们并不希望在聚合对象的抽象层接口中充斥着各种不同遍历的操作。在迭代器模式中，提供一个外部的迭代器来对聚合对象进行访问和遍历，迭代器定义了一个访问该聚合元素的接口，并且可以跟踪当前遍历的元素。
+* 电视机遥控器就是一个迭代器实例，通过它可以实现对电视机频道集合的遍历操作。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuL9_iN_jazsBdyvSyMp5mgTx-haoyqfIYz8IarCLGi8yWSp4aloYQYu58D0kJYrnpaZCoqlDqG2gKiZKLB0goyzCWKWcbnOLfUR15G3b_9EoKfDB8B9vgHKb6YZg2ufIopBpIujHHJEBVHABmIgJylDpKXFpOC9kcKMeuhLSoJc9nSKAmTcLvVb59HceRjM5EiSpBoMrGi4Av5nR1GFitg2RKqESVSXo9HqSo8KUZ0fwUZLsY1J01NSxfXHoaadD0RgaE3C_hngQAefI4qjIOKf1TY8qOaGXkcxT_AGicDUZOuao4DCe1RtI0g1x4GBOr6Zhwc8a95Ya9UTGmLr0K_0u2IwDS0rIU7CvfEQb0FCg0000)
+
+***
+### 5、中介者模式（Mediator Pattern）
+* 用一个中介对象来封装一系列的对象交互，中介对象使各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立的改变它们之间的交互。
+* 如某系统欲增加一个虚拟聊天室，允许论坛会员通过该聊天室进行信息交流，普通会员可以给其他会员发送文本信息，钻石会员既可以发送文本信息也可以发送图片信息。该聊天室可以对不雅文字进行过滤，如“日”等自负；还可以对发送的图片进行大小控制。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/pLEnJiCm4Dtz5ISnq59IYJL3LGGICC02F-2crpHI75UsKo414WiJ0z_0niAE19zJ49-1ozdGIoi6G8WkjU_UoxsxT-vR9ushLIdMPm_tiyVhrykhbxlRvwSR8GVM6Pavo4ffBMo7wyvOEgErEXFWVns3UM4TcjOXgW4QKEz_RKYdkXWIn68rFC5JrpfsfgXo61cjDiFPwNXIQAtCSObve7pqQsgX5eWNGf3WkT0ze-i9AKr86QImB-tOoK69_wO3HgKUFjH3Ka-Iyrvp_ABf3wcdNjUoW8AqoQDy9HL2IiL9w3nFduXAvvWs9NDqH_xMQdEEfJ0ZX0uYBPRrrDLIEdO1r4H0xEENt32OOJ757v6NtEHRwBqBUvIKE7B9ad7CsgG70PrkTRiRSNLt2wbqDLoqjCDYt2C-bU_jvMeuUqzQUG6-FdwAOh6_5SNc4Hu9NGHJnLDzNw9MvHi0)
+***
+### 6、备忘录模式（Memento Pattern）
+* 在不破会封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，这样可以在以后将对象恢复到原先保存状态。并且这个这个状态不能被这个对象和负责人以外的对象访问。
+* 如某系统提供了用户信息操作模块，用户可以修改自己的各项信息。为了使操作过程更佳人性画，现使用备忘录模式对系统进行改进，使得用户在进行了错误的操作之后可以恢复到之前的状态。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuL9_kgJzwVuPJ_TEVRPYuTCz_Lp9EOd5nGgXnQb5ddbf-IuX_jLS2a2WcvYSd5-QLw9W5LnIb9cN3X4i0AejpozAGHKjIStnoqSHqavFBN646A2XYIfJZ92122j0RGAgAylFJ87h3u3QfO4YKOoGWEc7EGhTW12Gip2iXuh3D8FTZcf3ObcgRsfkQbv9lWQKLYW51W-geepyShZ3Qg6125LDbG24ceKMHZfeNjP1ySLWZGAOAE48gENAooz9LIZAJCyeKSXFWuKeMEVJ9TDUDgzuigFtHVFU5-lslvo-xiNwfSytxdw_f-V5iiQdwsOzsTdvPCUkfpsjJzjQd_QlVx6yaIirBqK1P28NKlfMqDEpWniCZJddnABKaiJir29etEL2uzqAgWxk8LYqQA995SEaW7BmL0Cr1U4vBhWz2lcwkd1NA5X1LN8v01qCpAK0)
+***
+### 7、观察者模式（Observer Patter）
+* 定义对象间的一种一对多依赖关系，使得每当一个对象状态发生改变时，其相关依赖对象皆得到通知并被更新。观察者模式又叫做发布-订阅（Publish/Subscribe）模式，模式-视图（Model/View）模式、源-监听器（Source/Listener）模式或从属者（Dependents）模式。
+* 假设猫是老鼠和狗的观察目标，老鼠和狗是观察者，猫叫老鼠跑，狗也跟着叫。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/XP5DIWD148NtVOe7Ben8Se1PX4XSEhZm13KzfOx4wL1L4nWIGGJN7a5SwSuBU9r8Zc5-EcCBejlgxtlrcXgfaLXpEt67gzU7vVlpwlxny-rb-V7a71LgGjxW9wIAlBreYXlsDdS0S81GACkCHP6TY51xLgbjduv1PkIlUtbx7faDV8Hi5geo8YN_XtXfU_l1dNDLRIoNv1dVpdn72kiqrCe9thL5lpzC36HTRRVxrvWink3dnZ5jvCMmYuf27XhblPAkHXGZTngk_gAsCHWqqy4YBUZMsY_J4TVb-anV)
+***
+### 8、状态模式（State Pattern）
+* 在很多情况下，一个对象的行为取决于一个或多个动态变化的属性，这样的属性叫做状态，这样的对象叫做有状态的对象。在通常情况下，可以用复杂的条件判断 **(如if..else)** 来进行状态的判断和转换操作，这会导致代码的可维护性和灵活性下降，特别出现新的状态时，代码的可扩展性很差，客户端代码也需要进行相应的修改，违反了“开闭原则”。
+* 状态模式的动机就是允许一个对象在其内部状态改变时改变它的行为，对象看起来似乎修改了它的类。
+* 如某论坛系统中，用户可以发表留言，发表留言将增加积分；用户也可以回复留言，回复留言也将增加积分；用户还可以下载文件，下载文件将扣除积分。该系统用户可以分为三个等级，分别是新手、高手和专家，这三个等级对应三种不同的状态。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/nLD1JiCm4Bpx5POuqAZo1og4sal5XQfINs0SgxLmuifsg2f0WYiNti2D5t3YEvHli8stb4tJ76bltPbCPcSsmn2bZrLXsVdtoyVcwNdp_lRr-SgOiZ84FdQ-AaPAkQgCzup3Jt1u8ce-uAER4BrKSRRzZrWfYoqqYzwKythM9ngybw2Qc24XwAJ1UqGolIW3kJjdSkJEVxbPYmLKcu0uVLDJ12bPqslkLgLrCXyR2x01mq4vttn-vKtK4nSxA5ulxVeOvP4nYSvvofaiiWjQAiK79BuQEEDB1ve0cTqaHJLf2LyjjBe5rGwl_xFqlfsf0x1cf4KEoq56XYlIAo7b1XmSkPA3bY5vSev2NDBiWGgnKzA544rI2dptbLoP-U9FStqST9zqMx0TnH2C5DjsO6ZiskIvrSJQVdHgSrDl2kdNn1tEJckFxUiJrL8yD4w4fGWx2BX51sEeoxmgx0y0)
+***
+### 9、策略模式（Strategy Pattern）
+* 在软件系统中，有许多算法可以实现某一功能，如查找、排序等你，一种常用的方法是硬编码在一个类中，如需要提供多种查找算法，每一个方法对应一种具体的算法；也可以将这些查找算法封装在一个统一的方法中，通过if...else...等条件判断语句来进行选择。但是当需要增加一种新的查找算法，需要修改封装算法类的源代码；更换查找算法，也需要修改客户端调用代码，非常难维护。
+* 为了解决这些问题，可以定义 一些独立的类来封装不同的算法，每一个类封装一个具体的算法，在这里，每一个封装算法的类我们可以称之为策略，为了保证这些策略的一致性，一般会用一个抽象的策略类来做算法的定义，而每一个算法对应于一个具体策略类。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuL9_ldRQywbBdwrO-7HFFrTcNabgKLfYSgf2S7vHIJMN0X1eAnG3sHf0AGN7egBeM4q5AmKW9pgMgvOhEIUnk5Z1gJGfAISLNOS2FYt1gJcfoIMP-NaawVBCAquj8a4N5y9b2dgb1NerTc1_SS5jnv21sO0f0t42o8x4Ie_4l9ISL8W3TC4Ey4_AKh02AuIvAhK4nDC04J0L8AULvMUc4E5m96iKydLr8MvGi8APnEMGcfS2Z3u0)
+***
+### 10、模版方法模式（Template Mothod Pattern）
+* 定义一个操作中算法的骨架，而将一些步骤延迟到子类中，模版方法使得子类可以不改变一个算法的结构即可以重定义该算法的某一些特定步骤。
+* 如在银行办理业务时，一般都包含几个基本步骤，首先需要取号排队，然后办理具体业务，最后需要对银行工作人员进行评分。无论具体业务时取款、存款还是转账，其基本流程都一样。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuL9_jcBXyyuE8FbqJpyNLs9ISKbHOdA9Gd9EOd6nWbDYNdP8Qcv1Jc99QZMN0X1eAvGaPgVwbUOcfHOfQ6WgM2cKvMUcGAM0MlEAWRen95BB4dDAWMPWI1GKvIUd5XSZYTTovUK35UQaffKevAUXkC3A2geSh1dX3WrDQv08t7ee7suhY9-Qbw80CfYB2-8pbzI2_EBCachSBg-5gWpFBCb8AKei9q9f24WgBRK8hr8kgDKAkherTiZUuuBPX2a3CnXJnW7eCM0y0W00)
+***
+### 11、访问者模式（Visitor Pattern）
+* 对于系统中的某些对象，他们存储在同一个集合中，且具有不同类型，而且对于该集合中的对象，可以接受一类称为访问者的对象来访问，不同的访问者其访问方式有所不同。
+* 如顾客在超市中将选择的商品，如苹果、图书等放在购物车中，然后到收银员处付款。在购物过程中，顾客需要对这些商品进行访问，以便确认这些商品的质量，之后收银员计算价格时也需要访问购物车内顾客所选择的商品。此时，购物车作为一个ObjectStructure(对象结构)用于存储各种类型的商品，而顾客和收银员作为访问这些商品的访问者，他们需要对商品进行检查和计价。不同类型的商品其访问形式也可能不同，如苹果需要过秤之后再计价，而图书不需要。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/hP3DIWCn58NtUOeBBcoHwGCKBFtPYWW5zxSpLmdD94DofrAquCQrIzVkNFK919z6gMzXqabQBTAwi8iqSt9oxdVITuoMwrA9uzNoxVDfkRf_-7XvVdzz53XnR35do1Kw1vVIIJRsLe3_7O76ag0xPYlrzLew0KTy7jHMewujRUZ2pCWYMcOXf3MeAaM0OVtrV6ZC52P-sPmkX6WeHhLZKrB4Y1VWK2BiYnoZ-gUy10TPTjTB3oP2_euaf6QoLvWJN5XJr3cd-PZdLFdyw6p6jSKYigwv_kWDY0UjJT5EnyD54X7k_LHIO3qVefjIXCr0ISU-_i1Qd9-5_Ibekjb-xnk-ywnO574QjDAcQlvtd9PACwE3veNOu4AMVUioKf8q-uAzRQ4a1cEa57tIHLsgBm00)

@@ -1,0 +1,49 @@
+### 1、适配器模式（Adapter Pattern）
+* 用于将一个接口转换为客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，其别名为包装器。适配器模式既可以作为类结构模型，也可以作为对象结构模型。
+* 适配器模式包含四个角色：目标抽象类定义客户要用的特定领域的接口；适配器类可以调用另一个接口，作为一个转化器，对适配器和抽象目标类进行适配，它是适配器模式的核心；适配者类是被适配的角色，它定义了一个已经存在的接口，这个接口需要适配；在客户类针对目标抽象类进行编程，调用在目标抽象类中定义的业务方法。
+* 如现在需要设计一个可以模拟各种动物行为的机器人，在机器人中定义类一系列方法，如机器人叫喊方法cry()、机器人移动方法move()等。如果希望在不修改已有代码的基础上使得机器人能狗像狗一样跑可以使用适配器模式进行系统设计。
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuL9_sT3qihNtwSmLprOiVBgddoiphoIrA2qnELKXA3yflwIQIm48j9EBAZKq5QmKol8pKo0YkVbbgGYXMgxadCJYOWMN_7IeZlB4l7GqBKMbUSWw45eSKn8BWBQIQ9TJPb4AL4j9UMfgIaugchQqd4hikaYr3-541Jsz6Zj8o22Bwke2HO5yBf3fc4fXmWYr804kXzIy560S0000)
+***
+### 2、桥接模式（Bridge Pattern）
+* 将抽象部分与它的实现部分分离，使他们都可以独立的变化。比如我们需要5种颜色和3种笔，我们在进行选择时就要3x5=15个类，采用桥接模式，我们则只需要5+3=8个类。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/fL51JiCm4BplArRYG12q3-YXgk302GbH9CvRUoaMZXFP3WXHlW1lwA4IZ-0xv1qacrhogQf23b5cFACPJnOXaezDQU6qtUxQprtxlVtz-G8mBh9_9CLuLTdAlmDsp_cAQ-fEYcNqngsnPdV_LlF57Zeg-GndBvNHy06WB8M0Twn7c0VljMTsezsNjk7HveSd4_aVqQIUHxYxiN0wtSo7qK7kdnFzbN8iBND2WdC2Q1MY9nLnQ7QR1ZrH_JdEzZgf6ZWAAkIDeaZbHA0zlHQ7_lQo96ibux0-xMJMnujlZDQMZz6d5ZXfwibctdr1CkUSfES4zB3gSPflmKutfVq3)
+***
+### 3、组合模式（Composite Pattern）
+* 组合模式用于组合多个对象形成树形结构以表示“整体-部分”。组合模式对单个对象（即叶子对象）和组合对象（即容器对象）的使用具有一致性。它会定义一个抽象构件类，它既代表叶子，又可以代表容器，而客户端针对构件类编程，无需知道它到底是叶子还是容器，可以对其进行统一管理。
+* 如在水果盘（Plate）中有一些水果，如苹果（Apple）、香蕉（Banana）、梨子（Pear），当然大水果盘中还可以有小水果盘。现需要对盘中遍历吃，当然如果对一个水果盘执行吃的方法，实际上就是吃其中的水果。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuL9_lhlbwOIEPoiMFjtJpvMOL5nIb9XSef2SarXShE1RwPgJcfkQLrBDfG04sgc99HgQ2bPb-PafNBLS43ME1GKvgSZogD9EYNb0Y5i-83Mn29iis5W5NTqQEuGhk226eOk2Z40NWvcUarW2TPnkJcPnYOALOr5HOgKFa8dX8uX0OagA1jmOXLG8ZQAYA3KtlomLjw9QBf2jw6w72kRhwY89AbWfv82Suf2QbmAC3000)
+
+***
+### 4、装饰模式（Decorator Pattern）
+* 可以在不改一个对象的基础上给对象增加额外的新行为。就增加对象功能来说，装饰模式比生成子类实现更为灵活。其别名也可以称为包装器（Responsibility）,就增加对象功能来说，与适配器模式的别名相同，但它们适用于不同的茶喝。
+* 如变形金刚在变形之前是一辆汽车，它可以在陆地上移动。当它变成其人之后除了能狗仔陆地上移动之外还可以说话；如果需要，它还可变成飞机，除了在陆地上移动还可以在天空中翱翔。
+<br>
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuL9_iRZrvT8DBnfQdwrO-7HFFrTcNabgKLfYSgf2I55YNd5QVb5kDPS246ZdvfUbQcWgM9NbPwPmrN8bvoGM5oiu9nP1fO4i3KryAZCIyz9JeQfrIs26ArWXB8BeXYhKW0ihm1LZDnzeiuAUNeqTmXo84RX4y_Nq4A8ALYLm1L2N1kKdvPT0VGLcut5AS68bmYKm0nmpYm9o4lDIeMR0k7YCISj1CGPiguAkReqTrCrSC3DG11rIyrA0aGW0)
+***
+### 5、外观模式（Facade Pattern）
+* 外部与一个子系统的通信必须通过一个统一的外观对象进行，为子系统种的一组接口提供一个一致的界面，外观模式定义类一个高层接口，这个接口使得一个子系统更加容易使用。
+* 如果没有外观角色，即没有为网站提供一个首页，每个用户需要记住所有子栏目的URL。有了外观角色，用户只需要和外观角色交互，让外观角色与子角色交互。
+* 如现在考察一个电源总开关的例子。为了使用方便，一个电源总开关可以控制四盏灯、一个风扇、一台空调和一台电视机的启动和关闭。通过该电源总开关可以同时控制所有上述电器设备。
+<br>
+
+![](http://www.plantuml.com/plantuml/png/ZL8zQ_Cm4DxrAsvx4rviBvqC3Ic5TEcMRYN3OSlsWNmorjKPGlzxhv8f2TXWB-RvkDCz9ns3u2XVlJF_Ef4Xb4KnEEHV9gzyNrGEGyXgmdR4taG4RvRjYEvy9Qcw4rPOsvi1_J97RHUWX7Vzo-S5de7jTKPFb-HfaDLnGauGAqKlDBvwhad8Q-iaoAJ2XtLseg1q9Fyl7BtR9ydpRW_bvAcUSTFy4TycZPv6cOSTV8W7GdcMaRXDPT6nhMTggKbkszsFIRSNtcrYKv5Ps1HasI5j0CfuKwicpRIgFIPOjTtTd2OWom9vVe05kpbQhlMz_G00)
+***
+### 6、享元模式（Flyweight pattern）
+* 运用共享技术有效地支持大量细粒度对象的复用。系统只使用少量的对象，而这些对象都很相似，状态变化很小，可以实现对象的多次复用
+* 很多网络设备都是支持共享的，如交换机，集线器等，多台计算机的终端可以连接同一台网络设备，并通过该网络进行数据转发。但是分配给每一个终端计算机的端口是不同的。可以将端口从网络设备中抽取出来作为外部状态，需要时再进行设置。
+<br>
+
+![](http://www.plantuml.com/plantuml/png/hPB1IiGm48RlUOgvsKNQzLnmMK74WuYm-mAn7Rl1DYd9T9T5VNUJJjWoe1UnXqB_RpB_FvDk0sbFqz2hgmFH6EhrUkorJKhLk67Tz3g4iZMwytfGobX2_wORX6Uaa_FlztWq3NueYCzrXxG_ZrYieDwHDxPZUGfOl3XFCCPNP4TdMlMbvjR03HvqGywVkK_Ppbg0-ivxVNuoWU0MB9xWyirrv4ZtUnoCrJtKniQo6xOKNOlL9Pv8NN18e9WvnX9i6IXvvFhLR2BH7ltid-5bhjt9K7F80oK7kHF68i7VT_WulVvg5Da_kIIGRHAM9nFCFdoOvO0aoTAMSp1VSaGtNWrKrUS6v9t4MNwInMM3Axtf3bHkH17K-QTIKgwgpJoOsg9jfw7_1W00))
+***
+### 7、代理模式（Proxy Pattern）
+* 给某个对象提供一个代理，并由代理对象控制对对象的引用。
+* 在一个论坛中已注册的用户和游客的权限不同，已注册的用户拥有发帖，修改自己的注册信息，修改自己帖子等功能；而游客只能看帖子，没有其他权限。使用代理模式中的保护代理，该代理用户控制对一个对象的访问，可以给不同的用户提供不同的使用权限。
+<br>
+
+![](http://www.plantuml.com/plantuml/png/lP9DIyD048Rl-olcPaMoyHneg7WIH8hW3zWc4pimknjs9gb5_U-I1Z-wVdWHR-5z9yFp3BiITKa7p-PagzfBLPOzkp0bjec-RDY952sv--IyCHGKK-SQX8kDQ7ADhZ5v4g4O7Wq0m9cFBNNxEy5q5RguE8LgZDJEtKYukucAnsa_R9XaEnLp_77Hvt51lSOHUK51WQUlr_hP773X5Xt_9LTU_4gM0xt3h5DysCz4HV-MGdMC34i8kCiyvfyEmb1Dxaiu_o-rdswUoO6rJ_KNpyDaYj-DvUkAeiuFSSc4GS7QEh-iMM5e1yyl)

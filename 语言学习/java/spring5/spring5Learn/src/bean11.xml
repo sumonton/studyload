@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <!--开启组件扫描
+        1、如果扫描多个包可以使用","隔开
+        2、扫描多个包的上层目录
+    -->
+    <context:component-scan base-package="com.smc.demo8"></context:component-scan>
+    <!--
+        use-default-filters="false"：表示不实用默认的过滤器，自己配置filter
+    -->
+<!--    <context:component-scan base-package="com.smc.demo8" use-default-filters="false">-->
+<!--        &lt;!&ndash;表示只扫描@Controller的注解的类&ndash;&gt;-->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--    </context:component-scan>-->
+
+<!--    <context:component-scan base-package="com.smc.demo8">-->
+<!--        &lt;!&ndash;表示除了@Controller的注解的类其他都扫描&ndash;&gt;-->
+<!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--    </context:component-scan>-->
+</beans>

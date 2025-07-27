@@ -1,0 +1,12 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(äüÃâ
+U	java:S106"9Replace this use of System.out or System.err by a logger.(äüÃâ8®ÏˆÊü/
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(äüÃâ8Ç”™Êü/
+U	java:S106."9Replace this use of System.out or System.err by a logger.(äüÃâ8èˆƒËü/
+U	java:S1067"9Replace this use of System.out or System.err by a logger.(äüÃâ8ÀÈƒËü/
+K
+java:S1128"/Remove this unused import 'com.smc.demo1.User'.(³À¿k8ôêƒËü/
+O
+java:S1128"-Remove this unused import 'org.junit.Assert'.(›ëš‡úÿÿÿÿ8õêƒËü/
+g
+java:S1192"JDefine a constant instead of duplicating this literal "bean1.xml" 5 times.(Ë³¾¨8Ï”™Êü/

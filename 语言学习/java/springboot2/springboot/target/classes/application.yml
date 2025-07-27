@@ -1,0 +1,45 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /smc
+spring:
+  web:
+#    resources:
+#      static-locations: [classpath:/haha/]
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  datasource:
+    url: jdbc://mysql:///springboot
+    username: root
+    password: smchen123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jdbc:
+    template:
+      query-timeout: 3
+  redis:
+    url:
+  banner:
+    image:
+      location: classpath:ccc.png
+  mvc:
+#    static-path-pattern: /static/**
+    hiddenmethod:
+      filter:
+        enabled: true
+    contentnegotiation:
+      favor-parameter: true
+      media-types:
+        x-smc: application/x-smc
+debug: true
+admin:
+  name: root
+  age: 18
+
+#配置mybatis规则
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

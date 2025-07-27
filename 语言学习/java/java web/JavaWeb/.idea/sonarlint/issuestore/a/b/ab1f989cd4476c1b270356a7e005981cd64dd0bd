@@ -1,0 +1,10 @@
+
+œ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ïû©Öûÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(òÃ½µ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(úÒÓÈøÿÿÿÿ
+N	java:S106,"9Replace this use of System.out or System.err by a logger.(ØØšÍ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(¼ùÐí
+N	java:S106/"9Replace this use of System.out or System.err by a logger.(¡ñ¦¢
+d
+java:S1128"NRemove this unused import 'org.apache.commons.fileupload.FileUploadException'.(Þ¨

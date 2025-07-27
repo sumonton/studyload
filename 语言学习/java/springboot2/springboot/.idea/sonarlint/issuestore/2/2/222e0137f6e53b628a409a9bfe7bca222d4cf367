@@ -1,0 +1,11 @@
+
+]
+java:S1128"GRemove this unused import 'com.fasterxml.jackson.annotation.JsonAlias'.(ùÌòä
+J
+java:S1128"4Remove this unused import 'com.smc.boot.bean.Admin'.(ÎðÈ÷
+z
+java:S1128"_Remove this unused import 'org.springframework.boot.autoconfigure.condition.ConditionalOnBean'.(ÇÞ¼Šýÿÿÿÿ
+|
+java:S1128
+"fRemove this unused import 'org.springframework.boot.context.properties.EnableConfigurationProperties'.(ñï÷²
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ý˜˜µþÿÿÿÿ

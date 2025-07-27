@@ -1,0 +1,21 @@
+
+V	java:S125 "<This block of commented-out lines of code should be removed.(ÊµÉÁüÿÿÿÿ
+V	java:S125'"<This block of commented-out lines of code should be removed.(«¼½Öúÿÿÿÿ
+V	java:S1254"<This block of commented-out lines of code should be removed.(à°˜§úÿÿÿÿ
+Z
+java:S1128	"?Remove this unused import 'org.springframework.http.MediaType'.(úŸİ¯şÿÿÿÿ
+r
+java:S1128"\Remove this unused import 'org.springframework.web.accept.HeaderContentNegotiationStrategy'.(â·ƒï
+u
+java:S1128"_Remove this unused import 'org.springframework.web.accept.ParameterContentNegotiationStrategy'.(ôôêø
+
+java:S1128"kRemove this unused import 'org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer'.(®´àá
+H
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ
+I
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+E
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ
+C
+java:S1604P"(Make this anonymous inner class a lambda(Œğ¡Ãÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(İ˜˜µşÿÿÿÿ

@@ -1,0 +1,11 @@
+
+Q	java:S125 "<This block of commented-out lines of code should be removed.(ñŠ‰
+V	java:S125&"<This block of commented-out lines of code should be removed.(ÌÆâıÿÿÿÿ
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(úä¡Ôüÿÿÿÿ
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(øè¾¥
+S	java:S106;"9Replace this use of System.out or System.err by a logger.(£¡¾ïÿÿÿÿÿ
+B
+java:S1602?",Remove useless curly braces around statement(Ÿ‰û
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(›Ó¨à
+_
+java:S1128"DRemove this unused import 'com.rabbitmq.client.BuiltinExchangeType'.(›è±èüÿÿÿÿ

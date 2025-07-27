@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smc.mybatis.dao.DepartmentMapper">
+
+    <select id="findById" resultType="com.smc.mybatis.bean.Department">
+        select *
+        from tb1_dept
+        where id = #{id}
+    </select>
+    <resultMap id="MyDept" type="com.smc.mybatis.bean.Department">
+        <id column="id" property="id"></id>
+        <result column="dept_name" property="deptName"></result>
+<!--        collection定义关联的集合类型
+            offType:指定集合中放的元素类型
+-->
+        <collection property="employees" ofType="com.smc.mybatis.bean.Employee">
+<!--            定义集合中元素的封装规则-->
+            <id column="eid" property="id"></id>
+            <result column="last_name" property="lastName"></result>
+            <result column="email" property="email"></result>
+            <result column="gender" property="gender"></result>
+        </collection>
+    </resultMap>
+    <select id="findByIdAndEmps" resultMap="MyDept">
+        select d.id,d.dept_name,e.id eid,e.last_name,e.email,e.gender
+        from tb1_dept d LEFT JOIN tb1_employee e on d.id = e.d_id
+        where d.id = #{id}
+    </select>
+    <resultMap id="MyDept1" type="com.smc.mybatis.bean.Department">
+        <id column="id" property="id"></id>
+        <result column="dept_name" property="deptName"></result>
+        <collection property="employees" select="com.smc.mybatis.dao.EmployeeMapper.findEmpsByDId"
+        column="id">
+
+        </collection>
+    </resultMap>
+    <select id="findDeptByIdStep" resultMap="MyDept1">
+        select *
+        from tb1_dept
+        where id = #{id}
+    </select>
+</mapper>

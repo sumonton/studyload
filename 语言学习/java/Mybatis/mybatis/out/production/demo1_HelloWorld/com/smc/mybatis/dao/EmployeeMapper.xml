@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smc.mybatis.dao.EmployeeMapper">
+    <!--名称空间namespace：只要把接口路径复制过来，可实现接口绑定，改id为方法名实现绑定
+    id:唯一表示
+    resultType：返回值类型
+    #{id}：从传递过来的参数中取出id
+    -->
+<!--    databaseId来指定什么数据库厂商时执行该sql-->
+    <select id="findEmpById" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select *
+        from tb1_employee
+        where id = #{id}
+    </select>
+</mapper>

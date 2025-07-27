@@ -1,0 +1,20 @@
+
+[	java:S112™"FDefine and throw a dedicated exception instead of using a generic one.(ÄÊĞ8
+\	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(Ÿ½”
+E
+java:S3740!"/Provide the parametrized type for this generic.(‚Ê«
+Q	java:S125#"<This block of commented-out lines of code should be removed.(Å™ã¦
+H
+java:S1905\"-Remove this unnecessary cast to "Collection".(•İ¦üÿÿÿÿ
+B
+java:S1168È"+Return an empty collection instead of null.(¥¹ï
+B
+java:S1168©"+Return an empty collection instead of null.(¥¹ï
+H
+java:S1602Ä",Remove useless curly braces around statement(Ä®öÿÿÿÿÿ
+Q	java:S125Õ"<This block of commented-out lines of code should be removed.(Í¼§
+T	java:S106õ"9Replace this use of System.out or System.err by a logger.(§ÔœÍøÿÿÿÿ
+t
+java:S1488”"]Immediately return this expression instead of assigning it to the temporary variable "count".(ıÿî¢
+z
+java:S1488­"^Immediately return this expression instead of assigning it to the temporary variable "remove".(²ĞÉàıÿÿÿÿ

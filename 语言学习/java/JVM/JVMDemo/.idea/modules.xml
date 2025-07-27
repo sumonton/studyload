@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GCTest/GCTest.iml" filepath="$PROJECT_DIR$/GCTest/GCTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JVMDemo.iml" filepath="$PROJECT_DIR$/JVMDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm01/jvm01.iml" filepath="$PROJECT_DIR$/jvm01/jvm01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm02/jvm02.iml" filepath="$PROJECT_DIR$/jvm02/jvm02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm03/jvm03.iml" filepath="$PROJECT_DIR$/jvm03/jvm03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm04/jvm04.iml" filepath="$PROJECT_DIR$/jvm04/jvm04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm05/jvm05.iml" filepath="$PROJECT_DIR$/jvm05/jvm05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm06/jvm06.iml" filepath="$PROJECT_DIR$/jvm06/jvm06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jvm07/jvm07.iml" filepath="$PROJECT_DIR$/jvm07/jvm07.iml" />
+    </modules>
+  </component>
+</project>

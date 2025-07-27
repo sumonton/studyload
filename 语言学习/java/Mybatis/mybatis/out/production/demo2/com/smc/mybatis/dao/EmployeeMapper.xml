@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smc.mybatis.dao.EmployeeMapper">
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"></cache>
+    <!--名称空间namespace：只要把接口路径复制过来，可实现接口绑定，改id为方法名实现绑定
+    id:唯一表示
+    resultType：返回值类型
+    #{id}：从传递过来的参数中取出id
+    -->
+<!--    databaseId来指定什么数据库厂商时执行该sql-->
+    <select id="findEmpById" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select *
+        from tb1_employee
+        where id = #{id}
+    </select>
+
+    <select id="findEmpByIdAndLastName" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select *
+        from tb1_employee
+        where id = #{id} and last_name = #{lastName}
+    </select>
+
+    <select id="findEmpByMap" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select *
+        from tb1_employee
+        where id = #{id} and last_name = #{lastName}
+    </select>
+
+    <!--返回list
+        resultType:如果返回的是一个list，类型要是数据类型
+    -->
+    <select id="findEmployees" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select *
+        from tb1_employee
+    </select>
+
+    <select id="findEmpByIdReturnMap" resultType="map" databaseId="mysql">
+        select *
+        from tb1_employee
+        where id = #{id}
+    </select>
+
+    <select id="findEmpByIdMap" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select *
+        from tb1_employee
+    </select>
+<!--mysql支持自增主键，自增主键值的获取，mybatis也是利用statement.getGeneralKeys();
+    useGenerateKey="true";使用自增主键获取主键值策略
+    keyProperty：指定对应的主键属性，也就是mybatis获取到的主键，将这个主键赋给bean的哪个属性-->
+    <!--<insert id="addEmp" parameterType="com.smc.mybatis.bean.Employee" useGeneratedKeys="true"
+    keyProperty="id" databaseId="mysql">
+            keyProperty:封装的主键值封装给javaBean的哪个属性
+            order="Before"：当前sql在插入sql语句执行前执行
+                 ="After":当前sql在插入sql语句之后执行
+             resultType：运行之后返回值类型
+
+        <selectKey keyProperty="id" order="BEFORE" resultType="Integer">
+            select EMPLOYEES_SEQ.nextval from dual
+        </selectKey>
+        insert into tb1_employee(id,email,gender) values(#{id},#{email},#{gender})
+    </insert>
+        -->
+
+
+    <insert id="addEmp" databaseId="oracle">
+        insert into tb1_employee(last_name,email,gender) values(#{lastName},#{email},#{gender})
+    </insert>
+
+    <update id="updateEmp">
+        update tb1_employee set last_name=#{lastName},email=#{email},gender=#{gender} where id=#{id}
+    </update>
+
+    <delete id="deleteEmpById">
+        delete from tb1_employee where id = #{id}
+    </delete>
+
+    <select id="findEmpsByDId" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select *
+        from tb1_employee
+        where d_id = #{dId}
+    </select>
+
+    <select id="getEmpsByConditionIf" resultType="com.smc.mybatis.bean.Employee" databaseId="mysql">
+        select * from tb1_employee
+        where
+        <!--test:判断表达式（OGNL）类似c:if test -->
+        <if test="id != null">
+            id = #{id}
+        </if>
+        <if test="lastName != null and lastName != ''">
+            and last_name like #{lastName}
+        </if>
+        <if test="email !=null and email.trim()!=''">
+            and email = #{email}
+        </if>
+        <if test="gender == 0 or gender == 1">
+            and gender = #{gender}
+        </if>
+    </select>
+</mapper>

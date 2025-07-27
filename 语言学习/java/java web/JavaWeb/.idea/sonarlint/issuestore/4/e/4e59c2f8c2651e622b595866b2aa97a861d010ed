@@ -1,0 +1,17 @@
+
+W
+java:S1161 ":Add the "@Override" annotation above this method signature(¤çÙœ8””ºÆ0
+r
+java:S1989'"PHandle the following exception that could be thrown by "doService": IOException.(ÒÎ™Šûÿÿÿÿ8™”ºÆ0
+r
+java:S1989,"PHandle the following exception that could be thrown by "doService": IOException.(ÒÎ™Šûÿÿÿÿ8œ”ºÆ0
+L
+java:S1172/"*Remove this unused method parameter "req".(µÌ¹Õûÿÿÿÿ8Ÿ”ºÆ0
+
+java:S1989="lHandle the following exception that could be thrown by "setCharacterEncoding": UnsupportedEncodingException.(áò‰øÿÿÿÿ8¦”ºÆ0
+X	java:S125R"<This block of commented-out lines of code should be removed.(½‘Ñ³8·”ºÆ0
+]	java:S125\"<This block of commented-out lines of code should be removed.(‚åû“úÿÿÿÿ8»”ºÆ0
+r
+java:S1989k"PHandle the following exception that could be thrown by "getWriter": IOException.(š³¸Æúÿÿÿÿ8Á”ºÆ0
+v
+java:S2293@"YReplace the type specification in this constructor call with the diamond operator ("<>").(øçêé8Ã”ºÆ0

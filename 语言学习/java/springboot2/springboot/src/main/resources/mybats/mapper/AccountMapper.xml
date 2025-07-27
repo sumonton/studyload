@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.smc.boot.mapper.AccountMapper">
+    <select id="getUser" resultType="com.smc.boot.bean.User">
+        select * from account_tbl where name = #{name}
+    </select>
+</mapper>

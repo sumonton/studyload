@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="emp" class="com.smc.demo3.Emp">
+        <property name="name" value="lucy"></property>
+        <property name="gender" value="女"></property>
+        <!--级联赋值-->
+        <property name="dept" ref="dept"></property>
+    </bean>
+
+    <bean id="emp1" class="com.smc.demo3.Emp">
+        <property name="name" value="lucy"></property>
+        <property name="gender" value="女"></property>
+        <!--级联赋值-->
+        <property name="dept" ref="dept"></property>
+        <!--需要bean中内部bean实现get方法-->
+        <property name="dept.name" value="技术部"></property>
+    </bean>
+    <bean id="dept" class="com.smc.demo3.Dept">
+        <property name="name" value="财务部"></property>
+    </bean>
+</beans>

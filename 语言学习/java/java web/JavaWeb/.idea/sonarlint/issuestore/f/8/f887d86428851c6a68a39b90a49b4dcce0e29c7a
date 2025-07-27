@@ -1,0 +1,35 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(È‹äùøÿÿÿÿ8äÀ¶Æ0
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(îº˜ùÿÿÿÿ8¼¯¶Æ0
+Z	java:S106)"9Replace this use of System.out or System.err by a logger.(¡äîşÿÿÿÿ8÷À¶Æ0
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(îº˜ùÿÿÿÿ8ŠÁ¶Æ0
+Z	java:S106<"9Replace this use of System.out or System.err by a logger.(¡äîşÿÿÿÿ8Á¶Æ0
+X	java:S125>"<This block of commented-out lines of code should be removed.(ÙŸÕ¼8’Á¶Æ0
+¦
+java:S1130K"ƒRemove the declaration of thrown exception 'org.apache.commons.exec.ExecuteException' which is a subclass of 'java.io.IOException'.(ÓËİÅûÿÿÿÿ8•Á¶Æ0
+Z	java:S106O"9Replace this use of System.out or System.err by a logger.(îº˜ùÿÿÿÿ8˜Á¶Æ0
+Z	java:S106Q"9Replace this use of System.out or System.err by a logger.(¡äîşÿÿÿÿ8›Á¶Æ0
+¡
+java:S1130]"ƒRemove the declaration of thrown exception 'org.apache.commons.exec.ExecuteException' which is a subclass of 'java.io.IOException'.(£Ñ–È8ŸÁ¶Æ0
+Z	java:S106a"9Replace this use of System.out or System.err by a logger.(îº˜ùÿÿÿÿ8¥Á¶Æ0
+Z	java:S106d"9Replace this use of System.out or System.err by a logger.(¡äîşÿÿÿÿ8§Á¶Æ0
+¡
+java:S1130q"ƒRemove the declaration of thrown exception 'org.apache.commons.exec.ExecuteException' which is a subclass of 'java.io.IOException'.(šÒæß8¶Á¶Æ0
+|
+java:S2142ƒ"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ÄÁ¶Æ0
+¢
+java:S1130“"ƒRemove the declaration of thrown exception 'org.apache.commons.exec.ExecuteException' which is a subclass of 'java.io.IOException'.(ü´¿Â8ÉÁ¶Æ0
+^	java:S125¤"<This block of commented-out lines of code should be removed.(Ü‡ÕÉüÿÿÿÿ8ÓÁ¶Æ0
+^	java:S125ª"<This block of commented-out lines of code should be removed.(ï—­ûÿÿÿÿ8×Á¶Æ0
+|
+java:S2142°"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ØÁ¶Æ0
+^	java:S125­"<This block of commented-out lines of code should be removed.(¹ºœÿÿÿÿÿ8õ‡—Ç0
+[	java:S106»"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ8ßÁ¶Æ0
+x
+java:S1192)"VDefine a constant instead of duplicating this literal "å‘½ä»¤è¿è¡Œå¤±è´¥ï¼" 4 times.(¡äîşÿÿÿÿ8ˆÂ¶Æ0
+x
+java:S1192'"VDefine a constant instead of duplicating this literal "å‘½ä»¤è¿è¡ŒæˆåŠŸï¼" 4 times.(îº˜ùÿÿÿÿ8‰Â¶Æ0
+`
+java:S1155t">Use isEmpty() to check whether the collection is empty or not.(·ËäÛûÿÿÿÿ8Â¶Æ0
+a
+java:S1155–">Use isEmpty() to check whether the collection is empty or not.(·ËäÛûÿÿÿÿ8Â¶Æ0

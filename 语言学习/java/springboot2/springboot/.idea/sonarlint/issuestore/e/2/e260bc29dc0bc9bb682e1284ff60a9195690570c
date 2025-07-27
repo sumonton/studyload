@@ -1,0 +1,10 @@
+
+E
+java:S3740&"/Provide the parametrized type for this generic.(”¬ß
+I
+java:S1128"3Remove this unused import 'com.smc.boot.bean.User'.(¶şŞÙ
+a
+java:S1128"FRemove this unused import 'org.springframework.stereotype.Controller'.(øŠ—Öùÿÿÿÿ
+C
+java:S1128"-Remove this unused import 'java.time.Period'.(šÉ¢½
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àÇ­şÿÿÿÿ

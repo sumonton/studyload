@@ -1,0 +1,16 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÊŞ°œ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ı¬ÀŠûÿÿÿÿ
+S	java:S106""9Replace this use of System.out or System.err by a logger.(ÒßÓ˜ûÿÿÿÿ
+T	java:S106$"9Replace this use of System.out or System.err by a logger.(÷³Á8ôÏÓğ°0
+X	java:S125."<This block of commented-out lines of code should be removed.(ÌÙ“Õ8‰™Èğ°0
+Z	java:S106<"9Replace this use of System.out or System.err by a logger.(ı¬ÀŠûÿÿÿÿ8òÚğ°0
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(ÿ»ªúÿÿÿÿ8È…âğ°0
+Z	java:S106A"9Replace this use of System.out or System.err by a logger.(Âäèÿÿÿÿÿ8ÀŒãğ°0
+Z	java:S106I"9Replace this use of System.out or System.err by a logger.(¤Ù¯·úÿÿÿÿ8µ™êğ°0
+C
+java:S1604&"(Make this anonymous inner class a lambda(á†áıÿÿÿÿ
+e
+java:S2095"JUse try-with-resources or close this "ServerSocket" in a "finally" clause.(áÜŞşÿÿÿÿ
+=
+java:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ

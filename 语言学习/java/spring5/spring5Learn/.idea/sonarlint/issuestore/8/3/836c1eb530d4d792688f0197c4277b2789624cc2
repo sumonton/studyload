@@ -1,0 +1,11 @@
+
+X
+java:S1128";Remove this unused import 'com.jdbctemplate.config.Config'.(÷œØÌ8Êşúü/
+‚
+java:S1128"fRemove this unused import 'org.springframework.context.annotation.AnnotationConfigApplicationContext'.(€¡¹;8¢Êşúü/
+O
+java:S1128"-Remove this unused import 'org.junit.Assert'.(›ëš‡úÿÿÿÿ8¦Êşúü/
+_
+java:S1192"IDefine a constant instead of duplicating this literal "jdbc.xml" 9 times.(”Ø¤³
+g
+java:S1192"LDefine a constant instead of duplicating this literal "bookService" 9 times.(¹‚ƒ¨ùÿÿÿÿ

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smc.ssm.mapper.EmployeeMapper">
+<!--    <cache type="org.mybatis.caches.ehcache.EhcacheCache"></cache>-->
+
+    <select id="findEmps" resultType="com.smc.ssm.bean.Employee">
+        select *
+        from tb1_employee
+    </select>
+
+    <select id="findEmpById" resultType="com.smc.ssm.bean.Employee">
+        select *
+        from tb1_employee
+        where id = #{id}
+    </select>
+
+</mapper>
